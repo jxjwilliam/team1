@@ -18,8 +18,8 @@ D3app.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   D3app.menus.add({
-    title: 'd3app example page',
-    link: 'd3app example page',
+    title: 'd3js App',
+    link: 'd3jsapp',
     roles: ['authenticated'],
     menu: 'main'
   });

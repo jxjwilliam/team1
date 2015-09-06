@@ -36,7 +36,7 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
+                Articles.articles.publish({
                     action: 'created',
                     user: {
                         name: req.user.name
@@ -64,7 +64,7 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
+                Articles.articles.publish({
                     action: 'updated',
                     user: {
                         name: req.user.name
@@ -90,7 +90,7 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
+                Articles.articles.publish({
                     action: 'deleted',
                     user: {
                         name: req.user.name
@@ -106,7 +106,7 @@ module.exports = function(Articles) {
          */
         show: function(req, res) {
 
-            Articles.events.publish({
+            Articles.articles.publish({
                 action: 'viewed',
                 user: {
                     name: req.user.name
