@@ -2,6 +2,9 @@
   <script type="text/javascript" src="{{file}}"></script>
 {% endfor %}
 
+<!--william: 09-06-->
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
 {% if (process.env.NODE_ENV == 'development') %}
   <script type="text/javascript" src="{{'//' + req.hostname + ':35729/livereload.js'}}"></script>
 {% endif %}
