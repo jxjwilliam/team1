@@ -1,4 +1,4 @@
-# MENA.io
+# MEAN.io
 
 ```bash
 mean init packageName && cd -
@@ -31,3 +31,24 @@ gulp
 ```bash
 nohup mongod 2>nohup.out
 ```
+
+
+
+## 2.
+
+```bash
+NODE_ENV=development grunt
+brew install redis
+
+gulp, node server, http-server .
+
+# npm update -g npm
+# npm update -g grunt-cli
+# npm update g bower
+
+nohup mongod &
+nohup redis-server &
+```
+
+
+
