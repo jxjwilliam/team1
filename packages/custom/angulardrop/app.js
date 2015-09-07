@@ -5,32 +5,32 @@
  */
 var Module = require('meanio').Module;
 
-var D3app = new Module('d3app');
+var Angulardrop = new Module('angulardrop');
 
 /*
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-D3app.register(function(app, auth, database) {
+Angulardrop.register(function(app, auth, database) {
 
   //We enable routing. By default the Package Object is passed to the routes
-  D3app.routes(app, auth, database);
+  Angulardrop.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
-  D3app.menus.add({
-    title: 'd3js App',
-    link: 'd3jsapp',
+  Angulardrop.menus.add({
+    title: 'angulardrop example page',
+    link: 'angulardrop example page',
     roles: ['authenticated'],
     menu: 'main'
   });
   
-  D3app.aggregateAsset('css', 'd3app.css');
+  Angulardrop.aggregateAsset('css', 'angulardrop.css');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback
     // Use this for saving data from administration pages
-    D3app.settings({
+    Angulardrop.settings({
         'someSetting': 'some value'
     }, function(err, settings) {
         //you now have the settings object
@@ -38,15 +38,15 @@ D3app.register(function(app, auth, database) {
 
     // Another save settings example this time with no callback
     // This writes over the last settings.
-    D3app.settings({
+    Angulardrop.settings({
         'anotherSettings': 'some value'
     });
 
     // Get settings. Retrieves latest saved settigns
-    D3app.settings(function(err, settings) {
+    Angulardrop.settings(function(err, settings) {
         //you now have the settings object
     });
     */
 
-  return D3app;
+  return Angulardrop;
 });

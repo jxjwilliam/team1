@@ -1,7 +1,7 @@
 {
-  "name": "d3app",
+  "name": "dragdroplist",
   "version": "0.0.1",
-  "description": "Some description of d3app",
+  "description": "Some description of dragdroplist",
   "author": {
     "name": "mean scaffold"
   },
