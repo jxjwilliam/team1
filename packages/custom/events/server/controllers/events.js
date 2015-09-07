@@ -42,7 +42,7 @@ module.exports = function(Events) {
                         name: req.user.name
                     },
                     url: config.hostname + '/events/' + event._id,
-                    name: event.title
+                    name: event.type
                 });
 
                 res.json(event);
@@ -69,7 +69,7 @@ module.exports = function(Events) {
                     user: {
                         name: req.user.name
                     },
-                    name: event.title,
+                    name: event.type,
                     url: config.hostname + '/events/' + event._id
                 });
 
@@ -95,7 +95,7 @@ module.exports = function(Events) {
                     user: {
                         name: req.user.name
                     },
-                    name: event.title
+                    name: event.type
                 });
 
                 res.json(event);
@@ -111,7 +111,7 @@ module.exports = function(Events) {
                 user: {
                     name: req.user.name
                 },
-                name: req.event.title,
+                name: req.event.type,
                 url: config.hostname + '/events/' + req.event._id
             });
 
@@ -123,16 +123,15 @@ module.exports = function(Events) {
         all: function(req, res) {
             var query = req.acl.query('Event');
 
-            query.find({}).sort('-created').populate('user', 'name username').exec(function(err, events) {
+            Event.find({}).sort('-created').populate('user', 'name username').exec(function(err, events) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot list the events'
                     });
                 }
 
-                res.json(events)
+                res.json(events);
             });
-
         }
     };
 }

@@ -15,12 +15,20 @@ var EventSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  title: {
+  type: {
     type: String,
     required: true,
     trim: true
   },
-  content: {
+  sequenceId: {
+    type: Number,
+    required: true
+  },
+  transactionId: {
+    type: Number,
+    required: true
+  },
+  description: {
     type: String,
     required: true,
     trim: true
@@ -28,9 +36,6 @@ var EventSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
-  },
-  permissions: {
-    type: Array
   },
   updated: {
     type: Array
@@ -40,13 +45,13 @@ var EventSchema = new Schema({
 /**
  * Validations
  */
-EventSchema.path('title').validate(function(title) {
-  return !!title;
-}, 'Title cannot be blank');
+EventSchema.path('type').validate(function(type) {
+  return !!type;
+}, 'Type cannot be blank');
 
-EventSchema.path('content').validate(function(content) {
-  return !!content;
-}, 'Content cannot be blank');
+EventSchema.path('description').validate(function(description) {
+  return !!description;
+}, 'Description cannot be blank');
 
 /**
  * Statics

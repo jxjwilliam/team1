@@ -1,7 +1,7 @@
 <section data-ng-controller="EventsController" data-ng-init="findOne()">
   <span>{{event.created | date:'medium'}}</span> /
   <span>{{event.user.name}}</span>
-  <h2>{{event.title}}</h2>
+  <h2>{{event.type}}</h2>
   <div data-ng-if="hasAuthorization(event)">
     <a class="btn" href="/events/{{event._id}}/edit">
       <i class="glyphicon glyphicon-edit"></i>
@@ -10,5 +10,5 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <div>{{event.content}}</div>
+  <div>{{event.description}}</div>
 </section>

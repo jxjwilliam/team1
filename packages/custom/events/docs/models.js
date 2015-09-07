@@ -2,20 +2,24 @@ exports.models = {
 
   Event: {
     id: 'Event',
-    required: ['content', 'title'],
+    required: ['description', 'type'],
     properties: {
    
-      title: {
+      type: {
         type: 'string',
-        description: 'Title of the event'
+        description: 'Title of the Event'
       },
-      content: {
+      description: {
         type: 'string',
-        description: 'content of the event'
+        description: 'content of the Event'
       },
-      permissions: {
-        type: 'Array',
-        description: 'Permissions for viewing the event'
+      sequenceId: {
+        type: 'Number',
+        description: 'Sequence Id'
+      },
+      transactionId: {
+        type: 'Number',
+        description: 'Transaction Id'
       }
     }
   }
