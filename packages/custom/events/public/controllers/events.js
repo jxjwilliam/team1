@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('mean.events').controller('EventsController', ['$scope', '$stateParams', '$location', 'Global', 'Events', 'MeanUser', 'Circles',
-  function($scope, $stateParams, $location, Global, Events, MeanUser, Circles) {
+angular.module('mean.events').controller('EventsController', ['$scope', '$stateParams',
+  '$location', 'Global', 'Events', 'MeanUser', 'Circles', 'MeanSocket',
+  function($scope, $stateParams, $location, Global, Events, MeanUser, Circles, MeanSocket) {
     $scope.global = Global;
 
     $scope.hasAuthorization = function(event) {
@@ -33,9 +34,11 @@ angular.module('mean.events').controller('EventsController', ['$scope', '$stateP
         var event = new Events($scope.event);
 
         event.$save(function(response) {
-          $location.path('events/' + response._id);
+          //$location.path('events/' + response._id);
+          $location.path('events');
         });
 
+        MeanSocket.emit('event:count:sync');
         $scope.event = {};
 
       } else {
@@ -52,6 +55,7 @@ angular.module('mean.events').controller('EventsController', ['$scope', '$stateP
             }
           }
           $location.path('events');
+          MeanSocket.emit('event:count:sync');
         });
       } else {
         $scope.event.$remove(function(response) {

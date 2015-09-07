@@ -8,14 +8,14 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
-module.exports = function(Events) {
+module.exports = function (Events) {
 
     return {
         /**
          * Find event by id
          */
-        event: function(req, res, next, id) {
-            Event.load(id, function(err, event) {
+        event: function (req, res, next, id) {
+            Event.load(id, function (err, event) {
                 if (err) return next(err);
                 if (!event) return next(new Error('Failed to load event ' + id));
                 req.event = event;
@@ -25,11 +25,11 @@ module.exports = function(Events) {
         /**
          * Create an event
          */
-        create: function(req, res) {
+        create: function (req, res) {
             var event = new Event(req.body);
             event.user = req.user;
 
-            event.save(function(err) {
+            event.save(function (err) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot save the event'
@@ -46,18 +46,24 @@ module.exports = function(Events) {
                 });
 
                 res.json(event);
+
+                /**
+                 * add socket emit to trigger event:count event.
+                 */
+                //io.emit('event:count:sync');
+                //console.log('server/controllers/events.js:', wsio);
             });
         },
         /**
          * Update an event
          */
-        update: function(req, res) {
+        update: function (req, res) {
             var event = req.event;
 
             event = _.extend(event, req.body);
 
 
-            event.save(function(err) {
+            event.save(function (err) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot update the event'
@@ -79,11 +85,11 @@ module.exports = function(Events) {
         /**
          * Delete an event
          */
-        destroy: function(req, res) {
+        destroy: function (req, res) {
             var event = req.event;
 
 
-            event.remove(function(err) {
+            event.remove(function (err) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot delete the event'
@@ -99,12 +105,15 @@ module.exports = function(Events) {
                 });
 
                 res.json(event);
+
+                //wsio.emit('event:count:sync');
+
             });
         },
         /**
          * Show an event
          */
-        show: function(req, res) {
+        show: function (req, res) {
 
             Events.events.publish({
                 action: 'viewed',
@@ -120,10 +129,10 @@ module.exports = function(Events) {
         /**
          * List of Events
          */
-        all: function(req, res) {
+        all: function (req, res) {
             var query = req.acl.query('Event');
 
-            Event.find({}).sort('-created').populate('user', 'name username').exec(function(err, events) {
+            Event.find({}).sort('-created').populate('user', 'name username').exec(function (err, events) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot list the events'
@@ -134,4 +143,13 @@ module.exports = function(Events) {
             });
         }
     };
-}
+};
+
+/**
+ * william add for socket access events collection.
+exports.getAllEventsForSocket = function (cb) {
+    Event.find({}, function (err, events) {
+        return res.json(events);
+    });
+};
+ */
