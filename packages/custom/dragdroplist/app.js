@@ -18,13 +18,15 @@ Dragdroplist.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Dragdroplist.menus.add({
-    title: 'dragdroplist example page',
+    title: 'dragdroplist',
     link: 'dragdroplist example page',
     roles: ['authenticated'],
     menu: 'main'
   });
   
   Dragdroplist.aggregateAsset('css', 'dragdroplist.css');
+
+  Dragdroplist.aggregateAsset('js', '../bower_components/angular-drap-and-drop-lists/angular-drag-and-drop-lists.min.js');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above

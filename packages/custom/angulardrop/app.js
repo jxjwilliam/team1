@@ -18,13 +18,14 @@ Angulardrop.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Angulardrop.menus.add({
-    title: 'angulardrop example page',
+    title: 'angulardrop',
     link: 'angulardrop example page',
     roles: ['authenticated'],
     menu: 'main'
   });
   
   Angulardrop.aggregateAsset('css', 'angulardrop.css');
+  Angulardrop.aggregateAsset('js', '../../../bower_components/angular-drop/angular-drop.min.js');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
