@@ -11,10 +11,10 @@ var Events = new Module('events');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Events.register(function (app, auth, database, circles, swagger) {
+Events.register(function (app, auth, database, circles, swagger, socket) {
 
     //We enable routing. By default the Package Object is passed to the routes
-    Events.routes(app, auth, database);
+    Events.routes(app, auth, database, socket);
 
     Events.aggregateAsset('css', 'events.css');
 

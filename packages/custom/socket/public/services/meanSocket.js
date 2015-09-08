@@ -3,7 +3,7 @@
 
 var baseUrl = 'http://localhost:3000/';
 
-angular.module('mean.socket').factory('MeanSocketFactory', function($rootScope) {
+angular.module('mean.socket').factory('MeanSocket', function($rootScope) {
 	var socket = io.connect(baseUrl);
 	return {
 		on: function(eventName, callback) {

@@ -26,7 +26,7 @@ Dragdroplist.register(function(app, auth, database) {
   
   Dragdroplist.aggregateAsset('css', 'dragdroplist.css');
 
-  Dragdroplist.aggregateAsset('js', '../bower_components/angular-drap-and-drop-lists/angular-drag-and-drop-lists.min.js');
+  Dragdroplist.angularDependencies(['dndLists']);
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above

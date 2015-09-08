@@ -25,7 +25,8 @@ Angulardrop.register(function(app, auth, database) {
   });
   
   Angulardrop.aggregateAsset('css', 'angulardrop.css');
-  Angulardrop.aggregateAsset('js', '../../../bower_components/angular-drop/angular-drop.min.js');
+
+  Angulardrop.angularDependencies(['ui.drop']);
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above

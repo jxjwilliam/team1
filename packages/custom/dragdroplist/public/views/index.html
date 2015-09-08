@@ -1,27 +1,28 @@
-<div class="" data-ng-controller="DragdroplistController">
-  <h1>Example view from your new awesome package</h1>
-  <h2>Package: {{package.name}}</h2>
-  <ol>
-    <li>
-      <a href="/api/dragdroplist/example/anyone" target="_self">Server route that anyone can access</a>
-    </li>
-    <li>
-      <a href="/api/dragdroplist/example/auth" target="_self">Server route that requires authentication</a>
-    </li>
-    <li>
-      <a href="/api/dragdroplist/example/admin" target="_self">Server route that requires admin user</a>
-    </li>
-    <li>
-      <a href="/api/dragdroplist/example/render" target="_self">Raw Html rendering example from using swig</a>
-    </li>
-  </ol>
-  <h3><img src="/dragdroplist/assets/img/logo.png" /></h3>
-  </br>
-  <p class="alert alert-info">You can find your package in /packages/dragdroplist</p>
-  </br>
-  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/dragdroplist</p>
-  </br>
-  <h3><a href="http://learn.mean.io">Documentation</a></h3>
-  </br>
+
+<div class="typesDemo row">
+
+    <div ng-repeat="list in lists" class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">List of {{list.label}} (max. {{list.max}})</h3>
+            </div>
+            <div class="panel-body" ng-include="'./types.html'"></div>
+        </div>
+    </div>
+
 </div>
 
+<div class="row">
+    <div class="col-md-8" view-source="types"></div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">List Models</h3>
+            </div>
+            <div class="panel-body">
+                <pre class="code">{{modelAsJson}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

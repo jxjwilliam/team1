@@ -22,9 +22,9 @@ var hasPermissions = function(req, res, next) {
   next();
 };
 
-module.exports = function(Events, app, auth) {
+module.exports = function(Events, app, auth, database, socket) {
   
-  var events = require('../controllers/events')(Events);
+  var events = require('../controllers/events')(Events, socket);
 
   app.route('/api/events')
     .get(events.all)
