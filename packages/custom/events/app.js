@@ -14,10 +14,11 @@ var Events = new Module('events');
 Events.register(function (app, auth, database, circles, swagger, socket) {
 
     //We enable routing. By default the Package Object is passed to the routes
-    Events.routes(app, auth, database, socket);
+    Events.routes(app, auth, database, socket.io);
 
     Events.aggregateAsset('css', 'events.css');
 
+    Events.angularDependencies(['ngAnimate', 'ui.bootstrap', 'ui.grid']);
 
     //We are adding a link to the main menu for all authenticated users
     Events.menus.add({

@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
-module.exports = function (Events) {
+module.exports = function (Events, io) {
 
     return {
         /**

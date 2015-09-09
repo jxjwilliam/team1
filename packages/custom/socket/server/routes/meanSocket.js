@@ -88,7 +88,8 @@ module.exports = function (MeanSocket, io) {
         socket.on('event:count:sync', function () {
 
             mycontroller.getAllEventsForSocket(function (events) {
-                io.emit('event:count', events.length);
+                //io.emit('event:count', events.length);
+                io.emit('event:count', JSON.stringify(events));
             });
         });
 

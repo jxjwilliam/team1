@@ -5,10 +5,15 @@ angular.module('mean.events').directive('eventCountSocket',
     function (MeanSocket, $log) {
         return {
             restrict: 'EA',
+            controller: function($scope, $modal, $log) {
+
+
+            },
             link: function (scope, element, attrs) {
 
-                MeanSocket.on('event:count', function (eventcount) {
-                    scope.eventcount = eventcount;
+                MeanSocket.on('event:count', function (events) {
+                    scope.events = JSON.parse(events);
+                    scope.eventcount = scope.events.length;
                     $log.info('event:count: ', scope.eventcount);
                 });
 
