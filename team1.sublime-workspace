@@ -1,0 +1,261 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 431.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/SMART/smart-ops-board-1.2/smart-ops-board-app/src/main/web/templates/selectboard.html",
+		"/C/SMART/smart-ops-board-1.2/smart-ops-board-app/src/main/web/templates/views/fragments/tasks-pane.html",
+		"/C/SMART/smart-ops-board-1.2/smart-ops-board-app/src/main/web/templates/views/main.html",
+		"/C/Users/wjiang/WebstormProjects/movieApp/index.html",
+		"/C/Users/wjiang/WebstormProjects/movieApp/partials/movies.html",
+		"/C/Users/wjiang/WebstormProjects/movieApp/js/app.js",
+		"/C/Users/wjiang/WebstormProjects/movieApp/partials/movie-add.html",
+		"/C/Users/wjiang/WebstormProjects/movieApp/partials/_form.html",
+		"/C/Users/wjiang/WebstormProjects/todomvc/examples/angularjs/index.html",
+		"/C/Users/wjiang/WebstormProjects/todomvc/examples/angularjs/js/controllers/todoCtrl.js",
+		"/C/Users/wjiang/WebstormProjects/todomvc/examples/angularjs/js/app.js",
+		"/C/Users/wjiang/WebstormProjects/todomvc/examples/angularjs/js/directives/todoEscape.js",
+		"/C/Users/wjiang/WebstormProjects/todomvc/examples/angularjs/js/services/todoStorage.js",
+		"/C/Users/wjiang/WebstormProjects/angular-seed/app/index.html",
+		"/C/Users/wjiang/WebstormProjects/angular-seed/app/app.css",
+		"/C/Users/wjiang/WebstormProjects/angular-seed/app/app.js",
+		"/C/Users/wjiang/WebstormProjects/angular-perfect-scrollbar/examples/loremipsum.html",
+		"/C/Users/wjiang/WebstormProjects/angular-perfect-scrollbar/test.js",
+		"/C/Users/wjiang/WebstormProjects/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js",
+		"/C/SMART/smart-ops-board-1.2-7039/smart-ops-board-app/src/main/web/package.json",
+		"/C/Users/wjiang/WebstormProjects/typings/task-item.html",
+		"/C/Users/wjiang/WebstormProjects/typings/8396.html",
+		"/C/Users/wjiang/WebstormProjects/typings/app.ts",
+		"/C/Users/wjiang/WebstormProjects/typings/app.js",
+		"/C/Users/wjiang/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/wjiang/WebstormProjects/typings/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/install/package.json",
+		"/C/Users/wjiang/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/wjiang/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/wjiang/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/wjiang/WebstormProjects/typings/index.html",
+		"/C/Users/wjiang/WebstormProjects/typings/greeter.ts",
+		"/C/Users/wjiang/WebstormProjects/typings/angular2/angular2.d.ts",
+		"/C/Users/wjiang/WebstormProjects/typings/todo.d.ts",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/src/main/web/templates/maintenance.html",
+		"/C/Users/wjiang/.gradle/gradle.properties.txt",
+		"/C/dsny/smart-ops-board-1.2/.gradle/gradle.properties",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/controllers/main-controller.js",
+		"/C/dsny/gradlew.bat",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/controllers/maintenance-mode-controller.js",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/controllers/equipment-controller.js",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/config/logstashclean.sh",
+		"/C/dsny/smart-ops-board-1.2/smart-ops-board-app/config/logstash.conf",
+		"/C/dsny/build.gradle",
+		"/C/dsny/.gradle/gradle.properties",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/.gradle/gradle.properties",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/doc/assets/behavior.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/directives/lvl-drag-drop.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/directives/modal-directive.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/factories/modal-position.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/factories/async-wrapper.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/smart-ops-board-app/src/main/web/public/scripts/app.js",
+		"/C/Users/wjiang/Documents/smart-ops-board-1.2/.gitignore",
+		"/C/DSNY/settings.gradle"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"perfect",
+			"element",
+			"scrollTop",
+			"ScrollCtrl",
+			"25dc-006",
+			"endDate",
+			"isE",
+			"port",
+			"proxy",
+			"ng-controller=\"LoginCtrl\"",
+			"/smart-opsboard/login",
+			"smart-opsboard/login",
+			"formattedDetachments",
+			"Changeme137",
+			"rootScope"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "team1.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"installpackage",
+				"node_modules\\babel\\node_modules\\babel-core\\node_modules\\regenerator\\node_modules\\commoner\\node_modules\\install\\package.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 282.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

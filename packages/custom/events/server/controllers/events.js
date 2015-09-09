@@ -50,8 +50,10 @@ module.exports = function (Events, io) {
                 /**
                  * add socket emit to trigger event:count event.
                  */
-                //io.emit('event:count:sync');
-                //console.log('server/controllers/events.js:', wsio);
+                Events.find({}).sort('-created').exec(function (err, events)
+                    io.emit('event:count', JSON.stringify(events));
+                });
+
             });
         },
         /**
@@ -106,7 +108,9 @@ module.exports = function (Events, io) {
 
                 res.json(event);
 
-                //wsio.emit('event:count:sync');
+                Events.find({}).sort('-created').exec(function (err, events)
+                    io.emit('event:count', JSON.stringify(events));
+                });
 
             });
         },
