@@ -50,7 +50,7 @@ module.exports = function (Events, io) {
                 /**
                  * add socket emit to trigger event:count event.
                  */
-                Events.find({}).sort('-created').exec(function (err, events)
+                Event.find({}).sort('-created').exec(function (err, events) {
                     io.emit('event:count', JSON.stringify(events));
                 });
 
@@ -108,7 +108,7 @@ module.exports = function (Events, io) {
 
                 res.json(event);
 
-                Events.find({}).sort('-created').exec(function (err, events)
+                Event.find({}).sort('-created').exec(function (err, events) {
                     io.emit('event:count', JSON.stringify(events));
                 });
 

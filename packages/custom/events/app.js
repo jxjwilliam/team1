@@ -18,7 +18,8 @@ Events.register(function (app, auth, database, circles, swagger, socket) {
 
     Events.aggregateAsset('css', 'events.css');
 
-    Events.angularDependencies(['ngAnimate', 'ui.bootstrap', 'ui.grid']);
+    //ui-grid.css is in assets.json, 'ui.bootstrap',
+    Events.angularDependencies(['ngAnimate', 'ui.grid']);
 
     //We are adding a link to the main menu for all authenticated users
     Events.menus.add({

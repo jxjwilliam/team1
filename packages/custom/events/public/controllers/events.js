@@ -38,7 +38,7 @@ angular.module('mean.events').controller('EventsController', ['$scope', '$stateP
           $location.path('events');
         });
 
-        MeanSocket.emit('event:count:sync');
+        //MeanSocket.emit('event:count:sync');
         $scope.event = {};
 
       } else {
@@ -55,7 +55,7 @@ angular.module('mean.events').controller('EventsController', ['$scope', '$stateP
             }
           }
           $location.path('events');
-          MeanSocket.emit('event:count:sync');
+          //MeanSocket.emit('event:count:sync');
         });
       } else {
         $scope.event.$remove(function(response) {

@@ -4,7 +4,8 @@
       "bower_components/build/css/dist.min.css": [
         "bower_components/angular/angular-csp.css",
         "bower_components/angular-ui-select/dist/select.min.css",
-        "bower_components/angular-ui-grid/ui-grid.min.css"
+        "bower_components/angular-ui-grid/ui-grid.min.css",
+        "bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css"
       ]
     },
     "js": {
@@ -20,12 +21,13 @@
         "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
         "bower_components/angular-ui-select/dist/select.min.js",
         "bower_components/web-bootstrap/index.js",
+        "bower_components/lodash/lodash.min.js",
+        "bower_components/angular-ui-grid/ui-grid.min.js",
+        "bower_components/angular-animate/angular-animate.min.js",
         "bower_components/angular-drop/angular-drop.min.js",
         "bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js",
-        "bower_components/angular-ui-grid/ui-grid.min.js",
-        "bower_components/angular-animate/angular-animate.min.js"
-
-
+        "bower_components/perfect-scrollbar/js/min/perfect-scrollbar.min.js",
+        "bower_components/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js"
       ]
     }
   }
