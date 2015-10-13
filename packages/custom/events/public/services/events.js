@@ -14,4 +14,3 @@ dsny.factory('Events', ['$resource',
         });
     }
 ]);
-

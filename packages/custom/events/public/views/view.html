@@ -12,3 +12,37 @@
   </div>
   <div>{{event.description}}</div>
 </section>
+
+
+<simple-modal title="Version Information" visible="showModal">
+  <div class="well well-lg" style="font-size: 16px; width: 500px; margin:20px; pading:20px">
+    <p class="version alert alert-info">
+      <label class="glyphicon glyphicon-codepen" aria-hidden="true">Version: </label>
+      {{about.version}}{{about.subVersion}}
+    </p>
+
+    <p class="alert alert-success">
+      <label class="glyphicon glyphicon-calendar" aria-hidden="true">Today: </label>
+      {{about.today}}
+    </p>
+
+    <p class="alert alert-info">
+      <label class="glyphicon glyphicon-github-alt" aria-hidden="true">Commit: </label>
+      <!--{{about.commit}}-->
+
+      <!--<div ng-bind-html-unsafe="writeLabel(about.commit)"></div>-->
+      <span ng-bind-html="writeLabel(about.commit)"></span>
+    </p>
+
+    <p class="alert alert-warning">
+      <label class="glyphicon glyphicon-database" aria-hidden="true">Database: </label>
+      {{about.db}}
+    </p>
+
+    <p class="alert alert-danger">
+      <label class="glyphicon glyphicon-info-circle" aria-hidden="true">Environment: </label>
+      {{about.node_env}}
+    </p>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</simple-modal>
